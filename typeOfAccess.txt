@@ -1,0 +1,33 @@
+CREATE FUNCTION type_of_access (firstName VARCHAR(20), lastName VARCHAR(20))
+RETURNS VARCHAR(20)
+READS SQL DATA
+BEGIN
+
+DECLARE type VARCHAR(20);
+DECLARE total INT;
+
+SELECT Count(ref_privilege.Name) INTO total
+FROM ref_privilege
+JOIN subject
+ON subject_ID = subject_subject_ID
+JOIN user 
+ON User_ID = User_User_ID
+JOIN employee
+ON Employee_ID = Employee_Employee_ID
+JOIN Object
+ON OBJECT_ID = OBJECT_Object_ID
+WHERE First_Name = firstName AND Last_Name = lastName
+GROUP BY First_Name, Last_Name;
+
+IF total = 0 THEN
+    SET type = 'no access';
+ELSEIF total > 0 AND total <= 5 THEN
+    SET type = 'basic-access';
+ELSEIF total > 5 AND total <= 10 THEN
+    SET type = 'intermediate-access';
+ELSE
+    SET type = 'advanced-access';
+END IF;
+
+RETURN type;
+END
