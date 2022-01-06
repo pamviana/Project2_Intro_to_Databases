@@ -1,4 +1,4 @@
-# Project2_Intro_to_Databases
+# Project 2 Intro to Databases
 
 **Step 1 – Database implementation** 
 Run the SQL Text File on MySQL.
@@ -10,12 +10,12 @@ Project2_DATABASES > Database Implementation > Project2
 ![image](https://user-images.githubusercontent.com/54336594/148451691-7d15a266-bd33-4a93-9c44-8549c54d02cd.png)
 
 The procedures’ code can be found at:  
-Project2_DATABASES > Database Implementation > addUser  
-Project2_DATABASES > Database Implementation > addSubject  
+Database Implementation > addUser  
+Database Implementation > addSubject  
 
 We are using a VIEW in our application, so that needs to be added too.  
 It can be found at:  
-Project2_DATABASES > Database Implementation > typeOfAccess  
+Database Implementation > typeOfAccess  
 
 **Step 2 – Java Swing**
 The step-by-step to install Java Swing will depend on the IDE. We used Eclipse, and followed  
@@ -30,7 +30,7 @@ java class.
 ![image](https://user-images.githubusercontent.com/54336594/148451882-f50f28fc-65e1-44b4-81f6-e51154b68d6a.png)
 
 Files can be found at:  
-Project2_DATABASES > Java
+Java
 
 **Step 5 – Set up the connection between JDBC and MySQL**  
 You will only need to change the connection information on the class Store:  
